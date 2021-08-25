@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".SchedulingActivity"
     android:orientation="vertical"
-    android:padding="20sp">
+    android:padding="20sp"
+    android:background="@color/charcoal">
 
     <TextView
         android:id="@+id/event_q"
@@ -14,13 +15,14 @@
         android:layout_height="wrap_content"
         android:text="@string/event_title"
         android:textSize="50sp"
-        android:textColor="@color/black"/>
+        android:textColor="@color/yellow" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/event_ET"
         android:textSize="40sp"
-        android:textColor="@color/black"/>
+        android:textColor="@color/red"
+        android:hint="@string/event_title"/>
 
     <TextView
         android:id="@+id/time_q"
@@ -28,21 +30,31 @@
         android:layout_height="wrap_content"
         android:text="@string/time"
         android:textSize="30sp"
-        android:textColor="@color/black"
+        android:textColor="@color/yellow"
+        android:layout_marginTop="30sp"
         />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="20sp">
     <Button
         android:id="@+id/time_selector"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/time"/>
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:background="@drawable/ic_baseline_alarm_24"
+        android:backgroundTint="@color/yellow"
+        app:backgroundTint="@color/yellow" />
     <TextView
+        android:layout_marginLeft="10dp"
         android:id="@+id/time_displayer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/_00_00"
         android:textSize="30sp"
-        android:textColor="@color/black"
-        />
+        android:textColor="@color/red"
+        android:layout_marginStart="10dp" />
+</LinearLayout>
 
     <TextView
         android:id="@+id/date_q"
@@ -50,28 +62,42 @@
         android:layout_height="wrap_content"
         android:text="@string/date"
         android:textSize="30sp"
-        android:textColor="@color/black"
+        android:textColor="@color/yellow"
+        android:layout_marginTop="30sp"
         />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20sp">
     <Button
         android:id="@+id/date_selector"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/date"/>
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:background="@drawable/ic_baseline_calendar_today_24"
+        app:backgroundTint="@color/yellow" />
     <TextView
+        android:layout_marginLeft="10dp"
         android:id="@+id/date_displayer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/_00_00_00"
         android:textSize="30sp"
-        android:textColor="@color/black"
-        />
+        android:textColor="@color/red"
+        android:layout_marginStart="10dp" />
+</LinearLayout>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="done"
-        android:id="@+id/done"/>
+        android:text="@string/save"
+        android:id="@+id/done"
+        android:layout_marginTop="50sp"
+        android:layout_gravity="center"
+        app:backgroundTint="@color/yellow"
+        android:textColor="@color/charcoal"
+        android:textSize="30sp"/>
 
 
 </LinearLayout>

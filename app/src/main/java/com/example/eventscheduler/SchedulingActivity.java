@@ -40,6 +40,7 @@ public class SchedulingActivity extends AppCompatActivity{
         event_title = findViewById(R.id.event_ET);
         timeTV = findViewById(R.id.time_displayer);
         dateTV = findViewById(R.id.date_displayer);
+        Toast.makeText(SchedulingActivity.this, "Click on the icons to set TIME & DATE", Toast.LENGTH_LONG).show();
 
         time_button = (Button) findViewById(R.id.time_selector);
         time_button.setOnClickListener(new View.OnClickListener() {
@@ -51,8 +52,15 @@ public class SchedulingActivity extends AppCompatActivity{
                 TimePickerDialog timePickerDialog = new TimePickerDialog(SchedulingActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int i, int i1) {
-                        alarm_time = i + ":" + i1;
+
+
                         timeTV.setText(FormatTime(i, i1));
+                        if(i1>=15) i1 -= 15;
+                        else {
+                            i -=1;
+                            i1 = 60-(15-i1);
+                        }
+                        alarm_time = i + ":" + i1;
                     }
                 }, hour, minute, false);
                 timePickerDialog.show();
@@ -147,6 +155,8 @@ public class SchedulingActivity extends AppCompatActivity{
         intent.putExtra("event", title);
         intent.putExtra("time", time);
         intent.putExtra("date", date);
+
+        //alarm_time -= 900000;
 
         PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),
                 0, intent, PendingIntent.FLAG_ONE_SHOT);

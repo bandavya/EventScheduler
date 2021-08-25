@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/Black">
 
     <TextView
         android:id="@+id/heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textSize="50sp"
+        android:fontFamily="@font/aclonica"
         android:gravity="center"
-        android:textColor="@color/black"/>
+        android:text="@string/app_name"
+        android:textColor="@color/Orange"
+        android:textSize="50sp" />
     
 
     <androidx.recyclerview.widget.RecyclerView
