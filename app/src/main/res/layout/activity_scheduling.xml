@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SchedulingActivity"
+    android:orientation="vertical"
+    android:padding="20sp">
+
+    <TextView
+        android:id="@+id/event_q"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/event_title"
+        android:textSize="50sp"
+        android:textColor="@color/black"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/event_ET"
+        android:textSize="40sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/time_q"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        />
+    <Button
+        android:id="@+id/time_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time"/>
+    <TextView
+        android:id="@+id/time_displayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/_00_00"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/date_q"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        />
+
+    <Button
+        android:id="@+id/date_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"/>
+    <TextView
+        android:id="@+id/date_displayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/_00_00_00"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="done"
+        android:id="@+id/done"/>
+
+
+</LinearLayout>
